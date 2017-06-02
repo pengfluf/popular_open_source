@@ -4,6 +4,7 @@ import styles from './index.scss';
 import api from './../../utils/api.js';
 
 import PopularLangs from './../PopularLangs';
+import PopularRepos from './../PopularRepos';
 
 class Popular extends Component {
   constructor(props) {
@@ -41,9 +42,12 @@ class Popular extends Component {
 
     render() {
       return (
-        <PopularLangs selectedLanguage={this.state.selectedLanguage}
+        <div>
+          <PopularLangs selectedLanguage={this.state.selectedLanguage}
         onClick={this.updateLanguage}
       />
+          <PopularRepos repos={this.state.repos} />
+      </div>
       )
     }
 }

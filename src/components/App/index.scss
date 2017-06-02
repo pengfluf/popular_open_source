@@ -1,7 +1,10 @@
+@import "variables.scss";
+@import "normalize.scss";
+@import "bootstrap_grid.scss";
+@import "scaffolding.scss";
+
 .app {
-  max-width: 90%;
+  max-width: 95%;
   margin-right: auto;
   margin-left: auto;
-
-  outline: 1px dotted black;
 }

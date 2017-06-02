@@ -1,0 +1,29 @@
+.repositories {
+  margin-top: 50px;
+}
+
+.repo {
+  padding-right: 15%;
+  padding-left: 15%;
+
+  text-align: center;
+
+  &-index {
+    text-align: center;
+  }
+
+  &-link {
+    color: red;
+  }
+
+  &-stars {
+    font-size: 17px;
+  }
+
+  &-img {
+    margin-right: auto;
+    margin-left: auto;
+
+    border-radius: 50%;
+  }
+}
