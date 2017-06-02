@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import './index.scss';
+import CSSModules from 'react-css-modules';
+import styles from './index.scss';
 
 class App extends Component {
   constructor() {
@@ -9,10 +10,10 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div className="app">Hello!</div>
+        <div styleName="app">Hello!</div>
       </div>
     );
   }
 }
 
-export default App;
+export default CSSModules(App, styles);

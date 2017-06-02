@@ -39,7 +39,7 @@ module.exports = {
         test: /\.scss$/,
         use: [
           'style-loader?sourceMap',
-          'css-loader?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]',
+          'css-loader?modules&importLoaders=1&localIdentName=[local]___[hash:base64:7]',
           'resolve-url-loader',
           'sass-loader?sourceMap',
         ]
