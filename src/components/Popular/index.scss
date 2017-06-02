@@ -1,0 +1,37 @@
+.popular {
+  color: black;
+}
+
+.languages {
+  display: flex;
+
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0;
+
+  list-style: none;
+
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.language-wrapper {
+  margin-top: 5px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.language {
+  font-size: 18px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  color: black;
+}
+
+.language-active {
+  color: red;
+
+  composes: language;
+}

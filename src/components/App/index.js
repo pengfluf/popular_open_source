@@ -2,15 +2,17 @@ import React, { Component } from 'react';
 import CSSModules from 'react-css-modules';
 import styles from './index.scss';
 
+import Popular from './../Popular';
+
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
   }
 
   render() {
     return (
-      <div>
-        <div styleName="app">Hello!</div>
+      <div styleName="app">
+        <Popular />
       </div>
     );
   }
