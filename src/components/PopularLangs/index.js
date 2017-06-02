@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CSSModules from 'react-css-modules';
 import styles from './index.scss';
+import PropTypes from 'prop-types';
 
 import languages from './../../data/languages.js';
 
@@ -23,6 +24,11 @@ class PopularLangs extends Component {
     </div>
     )
   }
+}
+
+PopularLangs.propTypes = {
+  selectedLanguage: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired
 }
 
 export default CSSModules(PopularLangs, styles);
