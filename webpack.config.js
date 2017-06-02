@@ -4,11 +4,31 @@ const htmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  entry: './src/main.js',
+  entry: [
+    'react-hot-loader/patch',
+
+    'webpack-dev-server/client?http://localhost:8080',
+
+    'webpack/hot/only-dev-server',
+
+    './src/main.js'
+  ],
+
   output: {
     path: resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   },
+
+  devtool: 'inline-source-map',
+
+  devServer: {
+    hot: true,
+
+    contentBase: resolve(__dirname, 'dist'),
+
+    publicPath: '/'
+  },
+
   module: {
     rules: [{
         test: /\.js?$/,
@@ -19,7 +39,7 @@ module.exports = {
         test: /\.scss$/,
         use: [
           'style-loader?sourceMap',
-          'css-loader?sourceMap',
+          'css-loader?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]',
           'resolve-url-loader',
           'sass-loader?sourceMap',
         ]
@@ -30,7 +50,12 @@ module.exports = {
       }
     ],
   },
+
   plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+
+    new webpack.NamedModulesPlugin(),
+
     new webpack.NoEmitOnErrorsPlugin(),
 
     new htmlWebpackPlugin({
