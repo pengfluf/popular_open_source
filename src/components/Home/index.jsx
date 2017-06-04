@@ -5,7 +5,7 @@ import styles from './index.scss';
 
 const Home = () => (
   <div styleName="home">
-    <h1 styleName="title">Find out which of your favorite repositories on Github is cooler!</h1>
+    <h1 styleName="title">Find out which contributors on Github is cooler!</h1>
 
     <Link styleName="button" to="/compare">
       Try it!
