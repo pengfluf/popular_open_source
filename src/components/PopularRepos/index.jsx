@@ -14,7 +14,7 @@ class PopularRepos extends Component {
             {
               repos.map( (repo, index) => {
                 return (
-                  <li className="col-2"
+                  <li className="col-6 col-sm-4 col-md-3 col-lg-3 col-xl-2"
                     key={repo.id}>
                     <div styleName="repo">
                        <div styleName="repo-index"># {index + 1}</div>

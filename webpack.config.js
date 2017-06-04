@@ -16,7 +16,8 @@ module.exports = {
 
   output: {
     path: resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: '/'
   },
 
   devtool: 'inline-source-map',
@@ -26,12 +27,14 @@ module.exports = {
 
     contentBase: resolve(__dirname, 'dist'),
 
-    publicPath: '/'
+    publicPath: '/',
+    
+    historyApiFallback: true
   },
 
   module: {
     rules: [{
-        test: /\.js?$/,
+        test: /\.jsx?$/,
         use: ['babel-loader'],
         exclude: /node_modules/
       },
@@ -49,6 +52,10 @@ module.exports = {
         use: ['url-loader?name=[name].[ext]&limit=4096']
       }
     ],
+  },
+
+  resolve: {
+    extensions: ['.js', '.jsx']
   },
 
   plugins: [

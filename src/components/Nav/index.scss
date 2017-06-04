@@ -1,0 +1,25 @@
+:global {
+  .main-nav__item--active {
+    font-weight: bold;
+  }
+}
+
+.main-nav {
+  display: flex;
+
+  margin-left: 3%;
+  padding-top: 25px;
+
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  a {
+    font-size: 20px;
+
+    margin-right: 10px;
+
+    text-decoration: none;
+
+    color: #e53935;
+  }
+}

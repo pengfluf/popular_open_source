@@ -25,9 +25,15 @@
   font-size: 18px;
   font-weight: 700;
 
+  display: block;
+
+  cursor: pointer;
   text-decoration: none;
 
   color: black;
+  border: none;
+  outline: none;
+  background-color: transparent;
 }
 
 .language-active {

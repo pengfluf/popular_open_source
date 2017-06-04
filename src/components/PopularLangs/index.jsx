@@ -15,20 +15,21 @@ class PopularLangs extends Component {
             <li
               key={lang}
               onClick={this.props.onClick.bind(null, lang)}
-              styleName="language-wrapper">
-              <a styleName={lang === this.props.selectedLanguage ? `language-active` : `language`} href="#">{lang}</a>
+              styleName="language-wrapper"
+            >
+              <button styleName={lang === this.props.selectedLanguage ? 'language-active' : 'language'}>{lang}</button>
             </li>
-          )
+          );
         })}
         </ul>
-    </div>
-    )
+      </div>
+    );
   }
 }
 
 PopularLangs.propTypes = {
   selectedLanguage: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired
-}
+  onClick: PropTypes.func.isRequired,
+};
 
 export default CSSModules(PopularLangs, styles);

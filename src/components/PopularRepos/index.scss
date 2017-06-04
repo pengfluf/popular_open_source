@@ -1,29 +1,56 @@
 .repositories {
-  margin-top: 50px;
+  margin-top: 25px;
 }
 
 .repo {
+  margin-top: 25px;
   padding-right: 15%;
   padding-left: 15%;
 
   text-align: center;
 
   &-index {
+    font-size: 18px;
+    font-style: italic;
+
     text-align: center;
   }
 
+  &-img {
+    margin-top: 10px;
+    margin-right: auto;
+    margin-left: auto;
+
+    transition: transform 0.2s;
+
+    border-radius: 50%;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
   &-link {
+    font-size: 17px;
+
+    display: block;
+
+    margin-top: 10px;
+
+    text-decoration: none;
+
     color: red;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &-stars {
     font-size: 17px;
-  }
 
-  &-img {
-    margin-right: auto;
-    margin-left: auto;
+    margin-top: 10px;
 
-    border-radius: 50%;
+    text-shadow: 0 1px 1px;
   }
 }
