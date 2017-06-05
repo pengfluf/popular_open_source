@@ -4,13 +4,15 @@ import PropTypes from 'prop-types';
 import styles from './index.scss';
 
 const PlayerPreview = props => (
-    <div className="col-12 col-sm-6" styleName="player-preview">
-      <img
-        styleName="image"
-        src={props.avatar}
-        alt={`Avatar for ${props.username}`}
-      />
-      <h2 styleName="username">@{props.username}</h2>
+    <div styleName="player-preview">
+      <a styleName="image-link" href={`https://github.com/${props.username}`}>
+        <img
+          styleName="image"
+          src={props.avatar}
+          alt={`Avatar for ${props.username}`}
+        />
+      </a>
+      <a styleName="username-link" href={`https://github.com/${props.username}`}>@{props.username}</a>
       {props.children}
     </div>
 );

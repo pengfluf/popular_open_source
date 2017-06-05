@@ -1,5 +1,4 @@
-.error,
-.loading {
+.error {
   font-size: 25px;
   line-height: 45px;
 
@@ -26,5 +25,33 @@
 
   &:hover {
     text-decoration: underline;
+  }
+}
+
+.playagain {
+  font-size: 18px;
+
+  display: inline-block;
+
+  margin-top: 5vh;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 1vh;
+  padding-right: 35px;
+  padding-bottom: 1vh;
+  padding-left: 35px;
+
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+
+  color: black;
+  border: 1px solid black;
+  border-radius: 3px;
+  background-color: transparent;
+
+  &:hover {
+    color: white;
+    background-color: #e53935;
   }
 }

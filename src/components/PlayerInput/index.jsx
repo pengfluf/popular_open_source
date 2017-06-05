@@ -35,7 +35,6 @@ class PlayerInput extends Component {
 
   render() {
     return (
-      <div className="col-12 col-sm-6">
         <form styleName="form" onSubmit={this.handleSubmit}>
           <label styleName="label" htmlFor="username">
             {this.props.label}
@@ -57,7 +56,6 @@ class PlayerInput extends Component {
             Submit
           </button>
         </form>
-      </div>
     );
   }
 

@@ -1,7 +1,6 @@
 const { resolve } = require('path');
 const webpack = require('webpack');
 const htmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: [
@@ -28,7 +27,7 @@ module.exports = {
     contentBase: resolve(__dirname, 'dist'),
 
     publicPath: '/',
-    
+
     historyApiFallback: true
   },
 
@@ -66,12 +65,8 @@ module.exports = {
     new webpack.NoEmitOnErrorsPlugin(),
 
     new htmlWebpackPlugin({
+      inject: true,
       template: 'src/index.html'
     }),
-
-    new ExtractTextPlugin({
-      filename: 'style.css',
-      allChunks: true
-    })
   ]
 };

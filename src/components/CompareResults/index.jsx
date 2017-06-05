@@ -7,6 +7,7 @@ import { compare } from './../../utils/api';
 import styles from './index.scss';
 
 import Player from './../Player';
+import Loading from './../Loading';
 
 class CompareResults extends Component {
   constructor() {
@@ -29,7 +30,7 @@ class CompareResults extends Component {
     ]).then((results) => {
       if (results === null) {
         return this.setState(() => ({
-          error: 'Something went wrong... Please check validity of Github usernames. Also Github might forbid your requests due to exceeding requests limit.',
+          error: 'Something went wrong... Please check validity of Github usernames. Also Github might forbid your requests due to exceeding request limit.',
           loading: false,
         }));
       }
@@ -50,7 +51,7 @@ class CompareResults extends Component {
 
     if (loading) {
       return (
-        <div styleName="loading">Loading...</div>
+        <Loading />
       );
     }
 
@@ -80,6 +81,7 @@ class CompareResults extends Component {
             profile={loser.profile}
           />
         </div>
+        <Link styleName="playagain" to="/compare">Play again</Link>
       </div>
     );
   }

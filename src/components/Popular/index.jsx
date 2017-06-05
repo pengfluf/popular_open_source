@@ -5,6 +5,7 @@ import { fetchPopularRepos } from './../../utils/api';
 
 import PopularLangs from './../PopularLangs';
 import PopularRepos from './../PopularRepos';
+import Loading from './../Loading';
 
 class Popular extends Component {
 
@@ -49,7 +50,7 @@ class Popular extends Component {
         />
         {
           !this.state.repos
-          ? <div styleName="loading-repos">Loading...</div>
+          ? <Loading />
           : <PopularRepos repos={this.state.repos} />
       }
       </div>

@@ -19,7 +19,9 @@ const PlayerProfile = (props) => {
         {<li styleName="profile-item">Followers: {info.followers}</li>}
         {<li styleName="profile-item">Following: {info.following}</li>}
         {info.public_repos ? <li styleName="profile-item">Public Repositories: {info.public_repos}</li> : null}
-        {info.blog ? <li styleName="profile-item">{info.blog}</li> : null}
+        {info.blog ? <li styleName="profile-item">
+          <a styleName="profile-link" href={info.blog}>{info.blog}</a>
+        </li> : null}
       </ul>
     </PlayerPreview>
   );

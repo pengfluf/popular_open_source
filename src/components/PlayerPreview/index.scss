@@ -1,4 +1,6 @@
 .player-preview {
+  font-size: 0;
+
   width: 100%;
   margin-top: 3vh;
 
@@ -10,11 +12,37 @@
   margin-right: auto;
   margin-left: auto;
 
+  transition: all 0.3s;
+
   border-radius: 50%;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
-.username {
+.image-link {
+  display: block;
+
+  max-width: 150px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.username-link {
   font-size: 25px;
+  font-weight: bold;
+
+  display: inline-block;
 
   margin-top: 3vh;
+
+  cursor: pointer;
+  text-decoration: none;
+
+  color: black;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
