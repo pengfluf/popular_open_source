@@ -24,9 +24,10 @@
   },
   "dependencies": {
     "axios": "^0.16.2",
-    "react-css-modules": "^4.3.0",
     "prop-types": "^15.5.10",
+    "query-string": "^4.3.4",
     "react": "^15.5.4",
+    "react-css-modules": "^4.3.0",
     "react-dom": "^15.5.4",
     "react-router-dom": "^4.1.1"
   },

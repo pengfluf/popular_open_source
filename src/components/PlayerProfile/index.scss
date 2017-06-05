@@ -1,0 +1,9 @@
+.profile-item {
+  font-size: 17px;
+
+  margin-top: 5px;
+
+  &:first-of-type {
+    margin-top: 15px;
+  }
+}

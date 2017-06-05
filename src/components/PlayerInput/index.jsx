@@ -35,25 +35,29 @@ class PlayerInput extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label htmlFor="username">
-          {this.props.label}
-        </label>
-        <input
-          id="username"
-          placeholder="github username"
-          type="text"
-          autoComplete="off"
-          value={this.state.username}
-          onChange={this.handleChange}
-        />
-        <button
-          type="submit"
-          disabled={!this.state.username}
-        >
-          Submit
-        </button>
-      </form>
+      <div className="col-12 col-sm-6">
+        <form styleName="form" onSubmit={this.handleSubmit}>
+          <label styleName="label" htmlFor="username">
+            {this.props.label}
+          </label>
+          <input
+            styleName="input"
+            id="username"
+            placeholder="github username"
+            type="text"
+            autoComplete="off"
+            value={this.state.username}
+            onChange={this.handleChange}
+          />
+          <button
+            styleName="submit"
+            type="submit"
+            disabled={!this.state.username}
+          >
+            Submit
+          </button>
+        </form>
+      </div>
     );
   }
 

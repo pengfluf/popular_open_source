@@ -47,7 +47,9 @@ class Compare extends Component {
     const playerTwoImage = this.state.playerTwoImage;
 
     return (
-      <div>
+      <div styleName="compare">
+        <h1 styleName="title">Who's cooler? Find out!</h1>
+        <div className="row">
         {
           !playerOneName &&
           <PlayerInput
@@ -62,9 +64,13 @@ class Compare extends Component {
           <PlayerPreview
             avatar={playerOneImage}
             username={playerOneName}
-            onReset={this.handleReset}
-            id="playerOne"
-          />
+          >
+            <button
+              styleName="reset"
+              onClick={this.handleReset.bind(null, 'playerOne')}>
+              Reset
+            </button>
+          </PlayerPreview>
         }
 
         {
@@ -81,19 +87,25 @@ class Compare extends Component {
           <PlayerPreview
             avatar={playerTwoImage}
             username={playerTwoName}
-            onReset={this.handleReset}
-            id="playerTwo"
-          />
+          >
+            <button
+              styleName="reset"
+              onClick={this.handleReset.bind(null, 'playerTwo')}>
+              Reset
+            </button>
+          </PlayerPreview>
         }
+        </div>
 
         {
           playerOneImage && playerTwoImage &&
-          <Link to={{
+          <Link styleName="findout"
+            to={{
             pathname: `${match.url}/results`,
             search: `?playerOneName=${playerOneName}&playerTwoName=${playerTwoName}`,
           }}
           >
-            Find out
+            Find out!
           </Link>
         }
       </div>

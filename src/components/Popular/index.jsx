@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import CSSModules from 'react-css-modules';
 import styles from './index.scss';
-import api from './../../utils/api';
+import { fetchPopularRepos } from './../../utils/api';
 
 import PopularLangs from './../PopularLangs';
 import PopularRepos from './../PopularRepos';
@@ -29,7 +29,7 @@ class Popular extends Component {
       repos: null,
     }));
 
-    api.fetchPopularRepos(lang)
+    fetchPopularRepos(lang)
       .then((repos) => {
         this.setState(() =>
           ({
