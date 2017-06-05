@@ -50,7 +50,7 @@ class Compare extends Component {
       <div styleName="compare">
         <h1 styleName="title">Who's cooler? Find out!</h1>
         <div className="row">
-          <div className="col-6">
+          <div className="col-12 col-sm-6">
         {
           !playerOneName &&
           <PlayerInput
@@ -75,7 +75,7 @@ class Compare extends Component {
         }
         </div>
 
-          <div className="col-6">
+          <div className="col-12 col-sm-6">
         {
           !playerTwoName &&
           <PlayerInput
