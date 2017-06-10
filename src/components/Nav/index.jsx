@@ -7,7 +7,7 @@ const Nav = () => (
   <nav>
     <ul styleName="main-nav">
       <li>
-        <NavLink exact activeClassName="main-nav__item--active" to="/">
+        <NavLink exact activeClassName="main-nav__item--active" to="/popular_open_source">
           Home
         </NavLink>
       </li>

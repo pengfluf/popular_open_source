@@ -14,7 +14,7 @@ const App = () => (
     <div styleName="app">
       <Nav />
       <Switch>
-        <Route exact path="/" component={Home} />
+        <Route exact path="/popular_open_source" component={Home} />
         <Route exact path="/compare" component={Compare} />
         <Route path="/compare/results" component={CompareResults} />
         <Route path="/popular" component={Popular} />
